@@ -3,6 +3,10 @@ by (Didier Labour)
 ```
 Test fake Api can be viewed on the table screen.
 ```
+```
+Username are : admin or user
+Password for both is : password
+```
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
 ## Development server
