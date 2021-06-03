@@ -1,0 +1,125 @@
+<mat-card>
+
+  <mat-card-header>
+    <mat-card-title>New Transaction</mat-card-title>
+  </mat-card-header>
+
+  <form class="transaction-form" (ngSubmit)="onSubmit()" [formGroup]="transactionForm">
+    <mat-card-content>
+      <div class="center">
+        <h3>Customer Information</h3>
+        <div class="form-group">
+          <mat-radio-group aria-label="Customer Type" required formControlName="type">
+            <mat-radio-button value="1">New</mat-radio-button>
+            <mat-radio-button value="2" class="pad">Existing</mat-radio-button>
+          </mat-radio-group>
+
+          <mat-form-field class="pad1">
+            <mat-label>Reference</mat-label>
+            <input matInput name="Reference" id="Reference" placeholder="Reference" formControlName="reference"
+              required>
+          </mat-form-field>
+        </div>
+
+        <div class="form-group">
+
+          <mat-form-field>
+            <mat-label>No.</mat-label>
+            <input matInput name="CustomerNumber" id="CustomerNumber" placeholder="Customer number"
+              (change)="checkClient()" formControlName="customerNumber" required>
+          </mat-form-field>
+          <mat-form-field class="pad">
+            <mat-label>Name</mat-label>
+            <input matInput name="CustomerName" id="CustomerName" placeholder="Customer Name"
+              formControlName="customerName" required>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Address</mat-label>
+            <textarea matInput name="CustomerAddress" id="CustomerAddress" placeholder="Customer Address"
+              formControlName="customerAddress" required></textarea>
+
+          </mat-form-field>
+          <mat-form-field class="pad">
+            <mat-label>Phone</mat-label>
+            <input matInput name="CustomerPhoneNumber" id="CustomerPhoneNumber" placeholder="Customer Phone Number"
+              formControlName="customerPhoneNumber" required>
+              <mat-error *ngIf="transactionForm.get('customerPhoneNumber')!.invalid"> Please insert numeric only </mat-error>
+          </mat-form-field>
+
+
+
+        </div>
+        <h3>Transfer Information</h3>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label>Amount</mat-label>
+            <input matInput name="TransferAmount" id="TransferAmount" placeholder="Transfer Amount"
+              formControlName="transferAmount" required>
+              <mat-error *ngIf="transactionForm.get('transferAmount')!.invalid"> Please insert numeric only </mat-error>
+
+          </mat-form-field>
+          <mat-form-field appearance="fill" class="pad">
+            <mat-label>Currency:</mat-label>
+
+            <select matNativeControl formControlName="currency" required>
+              <option value="AED">AED</option>
+              <option value="EUR">EUR</option>
+              <option value="CHF">CHF</option>
+              <option value="MUR">MUR</option>
+              <option value="USD">USD</option>
+            </select>
+
+          </mat-form-field>
+        </div>
+
+        <h4>Benefeciary Information</h4>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label> Bank</mat-label>
+            <input matInput name="BenefeciaryBank" id="BenefeciaryBank" placeholder="Benefeciary Bank"
+              formControlName="benefeciaryBank" required>
+              <mat-error *ngIf="transactionForm.get('benefeciaryBank')!.invalid"> Please insert characters only </mat-error>
+
+          </mat-form-field>
+          <mat-form-field class="pad">
+            <mat-label> Account</mat-label>
+            <input matInput name="BankAccount" id="BankAccount" placeholder="bank Account" formControlName="bankAccount"
+              required>
+          </mat-form-field>
+        </div>
+        <h4>Transaction Details</h4>
+        <div class="form-group">
+          <mat-form-field>
+            <mat-label> Payment Details</mat-label>
+            <input matInput name="PaymentDetails" id="PaymentDetails" placeholder="Payment details"
+              formControlName="paymentDetails" required>
+              <mat-error *ngIf="transactionForm.get('paymentDetails')!.invalid"> Please insert characters only </mat-error>
+
+          </mat-form-field>
+
+          <mat-form-field class="pad">
+            <mat-label> Credit/Debit Card </mat-label>
+            <input matInput name="CardDetails" id="CardDetails" placeholder="Payment details"
+              formControlName="cardDetails" required>
+          </mat-form-field>
+        </div>
+        <div class="form-group">
+          <mat-form-field appearance="fill">
+            <mat-label>Region:</mat-label>
+            <select matNativeControl formControlName="region" required>
+              <option value="Port Louis">Port Louis</option>
+              <option value="Curepipe">Curepipe</option>
+              <option value="Vacoas">Vacoas</option>
+              <option value="Port Mathurin">Port Mathurin</option>
+            </select>
+
+          </mat-form-field>
+          <button mat-stroked-button color="accent" class="btn-block float">Submit</button>
+        </div>
+      </div>
+    </mat-card-content>
+
+  </form>
+</mat-card>

@@ -1,0 +1,32 @@
+.logo-img {
+  height: 17vh;
+  width: 17vh;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../../content/images/logo.png") no-repeat center center;
+  background-size: contain;
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.homeGrid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.boxSize {
+  width: 100%;
+  height: 100%;
+}
+.resize {
+  margin-left: 2vh;
+  width: 100%;
+  height: 100%;
+}

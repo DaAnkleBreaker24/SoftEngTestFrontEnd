@@ -1,0 +1,30 @@
+.box {
+  width: 100%;
+}
+
+.pad {
+  padding-left: 10vh;
+}
+.pad1 {
+  padding-left: 6vh;
+}
+mat-card-title {
+  text-align: center;
+}
+mat-card {
+  justify-content: center;
+}
+
+.center {
+  margin: auto;
+  width: 75%;
+  border: 3px solid rgb(220, 221, 220);
+  padding: 10px;
+  height: 100%;
+}
+.float {
+  margin-top: 2vh;
+  margin-right: 4vh;
+  text-align: justify center;
+  float: right;
+}

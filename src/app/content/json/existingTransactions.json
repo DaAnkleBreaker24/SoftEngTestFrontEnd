@@ -1,0 +1,10 @@
+
+[
+  {"name":"John Smith" ,"amount": "10000", "currency": "EUR", "reference":"CUS20210602001"},
+  {"name":"Jane Doe" ,"amount": "20000", "currency": "MUR", "reference":"CUS20210602002"},
+  {"name":"John Smith" ,"amount": "5000", "currency": "USD", "reference":"CUS20210602003"},
+  {"name":"John Smith" ,"amount": "7500", "currency": "AED", "reference":"CUS20210602004"},
+  {"name":"Jane Doe" ,"amount": "25000", "currency": "CHF", "reference":"CUS20210602005"},
+  {"name":"John Smith" ,"amount": "1000", "currency": "USD", "reference":"CUS20210602006"}
+
+]
